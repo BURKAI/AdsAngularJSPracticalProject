@@ -4,5 +4,5 @@
 'use strict';
 
 AdsApp.controller('testCtrl', ['$scope', function($scope) {
-    $scope.greeting = 'Hola!';
+    $scope.greeting = 'Hello World!';
 }]);
