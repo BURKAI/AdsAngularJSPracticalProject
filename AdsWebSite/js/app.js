@@ -3,6 +3,12 @@
  */
 
 var AdsApp = angular
-    .module('AdsApp', [])
-    .constant('autor','Poullo Oconne')
-  ;
+    .module('AdsApp', ['ngRoute','testCtrl'])
+    .config(['$routeProvider',function($routeProvider){
+            $routeProvider.when('mmm','testCtrl',{
+                templateUrl:'templates/views/home.html',
+                controller:'testCtrl'
+            })
+            .otherwise({redirectTo:'/'});
+        }])
+    .constant('autor','Poullo Oconne');
