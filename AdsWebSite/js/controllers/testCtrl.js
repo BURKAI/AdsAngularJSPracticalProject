@@ -3,6 +3,12 @@
  */
 'use strict';
 
-AdsApp.controller('testCtrl', ['$scope', function($scope) {
+AdsApp.controller('testCtrl',[ '$scope','testData', function($scope, testData) {
+
+    testData.getTestData(function(data){
+
+        $scope.testing=data;
+
+    });
     $scope.greeting = 'Hello World!';
 }]);
