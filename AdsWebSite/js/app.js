@@ -3,12 +3,16 @@
  */
 
 var AdsApp = angular
-    .module('AdsApp', [])
-//    .config(['$routeProvider',function($routeProvider){
-//            $routeProvider.when('mmm','testCtrl',{
-//                templateUrl:'templates/views/home.html',
-//                controller:'testCtrl'
-//            })
-//            .otherwise({redirectTo:'/'});
-//        }])
+    .module('AdsApp', ['ngRoute'])
+    .config(function($routeProvider){
+            $routeProvider.when('/route',{
+                templateUrl:'templates/views/home.html',
+                controller:'testCtrl'
+            })
+            .when('/next',{
+                    templateUrl:'templates/views/next.html',
+                    controller:'testCtrl'
+                })
+            .otherwise({redirectTo:'/route'});
+        })
     .constant('autor','Poullo Oconne');
