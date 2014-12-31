@@ -1,6 +1,50 @@
 
-<section>
+<section >
+  <div class="row gview">
+      <div class="col-md-3 mview">
+          <div class="mview-content">
+              <div class="view-element"><h2>Navigation</h2></div>
+              <hr/>
+                  <div class="view-element">
+                      <ul>
+                          <li><button class="navigation current-selection" aria-hidden="true" >Home</button></li>
+                          <li><button class="navigation">LOGIN</button></li>
+                          <li><button class="navigation">REGISTER</button></li>
 
-    <p>Hello, world of human</p>
-
+                     </ul>
+                 </div>
+              <hr/>
+              <div class="view-element"><h5>To publish a new ad, please login.
+                  </h5></div>
+          </div>
+      </div>
+      <div class="col-md-6 mview ">
+          <div class="mview-content">
+              <h3 class="article-title">Ads</h3>
+              <ul >
+                  <li ng-repeat="ad in allAds.ads" class="">
+                        <div class="add">
+                             <div class="row">
+                                 <h4 class="col-md-8 m-name"><strong> {{ad.title}}</strong></h4>
+                                 <span class="col-md-3 pull-right m-date">{{ad.date | date: 'd-MMM-yyyy'}}</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4"><img  class="mgi" ng-src="{{ad.imageDataUrl}}"></div>
+                                <div class="col-md-8">
+                                    <h5 class="textInfo">{{ad.text}}</h5>
+                                    <h5><strong>Name: </strong>{{ad.ownerName}}</h5>
+                                    <h5><strong>Email: </strong>{{ad.ownerEmail}}</h5>
+                                    <h5><strong>Phone: </strong>{{ad.ownerPhone}}</h5>
+                                </div>
+                            </div>
+                       </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="col-md-3 mview">
+          <div class="mview-content">c</div>
+          </div>
+     </div>
+    <script></script>
 </section>

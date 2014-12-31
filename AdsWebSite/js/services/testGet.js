@@ -6,7 +6,7 @@ AdsApp.factory('testData',['$http',function($http){
 
     return {
         getTestData:function(successcb){
-            $http({method:'GET',url:'http://softuni-ads.azurewebsites.net/api/Towns'})
+            $http({method:'GET',url:'http://softuni-ads.azurewebsites.net/api/Ads'})
                 .success(function(data, status, headers, config){
                     successcb(data);
                 })

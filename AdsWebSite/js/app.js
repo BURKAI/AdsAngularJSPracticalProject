@@ -7,11 +7,11 @@ var AdsApp = angular
     .config(function($routeProvider){
             $routeProvider.when('/route',{
                 templateUrl:'templates/views/home.html',
-                controller:'testCtrl'
+                controller:'ShowAllAdsCtrl'
             })
             .when('/next',{
                     templateUrl:'templates/views/next.html',
-                    controller:'testCtrl'
+                    controller:'ShowAllAdsCtrl'
                 })
             .otherwise({redirectTo:'/route'});
         })

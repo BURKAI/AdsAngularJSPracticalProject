@@ -1,5 +1,116 @@
-.b {
-    border:1px solid red;
-  / padding:5px;
-    margin:2px;
+@font-face {
+    font-family: CorporativeFont;
+    src: url('../fonts/HighlandGothicFLF.ttf');
+}
+
+@font-face {
+    font-family: CorporativeStylishFont;
+    src: url('../fonts/Bowhouse-Regular.otf');
+}
+
+.mgi{
+
+    border-radius: 5px;
+    border:1px solid #B8C0CC;
+    width:100%;
+}
+
+ul{
+    list-style: none;
+    display: inline;
+}
+
+li{
+    margin: 5px;
+}
+.head{
+    background-color: rgba(240,240,240,1);
+    font-family: CorporativeFont;
+    border-corner-shape:bevel;
+    border-bottom-left-radius: 20px;
+}
+
+.head h2{
+    vertical-align:middle;
+}
+
+.head img{
+   right:-15px;
+
+}
+
+.foot{
+    background-color: #2B2B2B;
+    font-family: CorporativeFont;
+    color:lightgray;
+}
+
+.mview{
+
+    padding: 5px;
+}
+
+.mview-content{
+    border-top-left-radius: 20px;
+    border:1px solid #BDBDE8;
+    background-color: rgba(225,225,225,1);
+}
+
+.gview{
+    margin-top: 3px;
+    margin-bottom: 3px;
+  /  background-color: #CDCDF8;
+    font-family: Century Gothic;
+    border-top-left-radius: 20px;
+}
+
+hr{
+    width:75%;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+.view-element{
+   / margin-left:auto;
+   / margin-right:auto;
+   text-align: center;
+}
+
+.navigation{
+    width:70%;
+}
+
+.add{
+    border:1px solid #B4B4B4;
+    border-radius: 10px;
+    /*background: -webkit-linear-gradient(#F0F0F0, #D9DBE9);*/
+    /*background: -o-linear-gradient(#F0F0F0, #D9DBE9);*/
+    /*background: -moz-linear-gradient(#F0F0F0, #D9DBE9);*/
+    /*background: linear-gradient(#F0F0F0, #D9DBE9);*/
+    background-color: #F0F0F0;
+    padding: 5px;
+    margin: 5px;
+}
+
+.c{
+    vertical-align:middle;
+   / border:1px solid red;
+    text-align: right;
+}
+
+.current-selection{
+.button-variant(red, white, blue);
+}
+
+.article-title{
+    text-align: center;
+}
+
+.textInfo{
+    text-indent: 20px;
 }
