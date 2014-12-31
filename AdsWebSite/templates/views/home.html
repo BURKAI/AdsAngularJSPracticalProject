@@ -3,13 +3,13 @@
   <div class="row gview">
       <div class="col-md-3 mview">
           <div class="mview-content">
-              <div class="view-element"><h2>Navigation</h2></div>
+              <div class="view-element"><h3>Navigation</h3></div>
               <hr/>
                   <div class="view-element">
                       <ul>
-                          <li><button class="navigation current-selection" aria-hidden="true" >Home</button></li>
-                          <li><button class="navigation">LOGIN</button></li>
-                          <li><button class="navigation">REGISTER</button></li>
+                          <li><button class="navigation current-selection" ng-click="does($event)"  >Home</button></li>
+                          <li><button class="navigation" ng-click="does($event)">LOGIN</button></li>
+                          <li><button class="navigation" ng-click="does($event)">REGISTER</button></li>
 
                      </ul>
                  </div>
@@ -28,12 +28,13 @@
                                  <h4 class="col-md-8 m-name"><strong> {{ad.title}}</strong></h4>
                                  <span class="col-md-3 pull-right m-date">{{ad.date | date: 'd-MMM-yyyy'}}</span>
                             </div>
+                            <div class="line"></div>
                             <div class="row">
                                 <div class="col-md-4"><img  class="mgi" ng-src="{{ad.imageDataUrl}}"></div>
                                 <div class="col-md-8">
                                     <h5 class="textInfo">{{ad.text}}</h5>
-                                    <h5><strong>Name: </strong>{{ad.ownerName}}</h5>
-                                    <h5><strong>Email: </strong>{{ad.ownerEmail}}</h5>
+                                    <h5><strong>Name: &nbsp;</strong>{{ad.ownerName}}</h5>
+                                    <h5><strong>Email:&nbsp;&nbsp; </strong>{{ad.ownerEmail}}</h5>
                                     <h5><strong>Phone: </strong>{{ad.ownerPhone}}</h5>
                                 </div>
                             </div>
@@ -43,7 +44,14 @@
           </div>
       </div>
       <div class="col-md-3 mview">
-          <div class="mview-content">c</div>
+          <div class="mview-content">
+              <h3 class="article-title">Categories</h3>
+              <hr/>
+                  <ul>
+                      <li ng-repeat="category in category.ads" class="">
+                      </li>
+                  </ul>
+          </div>
           </div>
      </div>
     <script></script>

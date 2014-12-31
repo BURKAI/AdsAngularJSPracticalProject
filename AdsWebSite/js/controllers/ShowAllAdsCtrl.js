@@ -13,4 +13,9 @@ AdsApp.controller('ShowAllAdsCtrl',[ '$scope','testData', function($scope, testD
 
     });
     $scope.greeting = 'Hello World!';
+    $scope.does= function($event){
+
+    $('.current-selection').removeClass('current-selection');
+    $($event.target).addClass('current-selection');
+    }
 }]);
