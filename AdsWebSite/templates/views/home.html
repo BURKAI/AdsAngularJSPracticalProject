@@ -7,9 +7,9 @@
               <hr/>
                   <div class="view-element">
                       <ul>
-                          <li><button class="navigation current-selection" ng-click="does($event)"  >Home</button></li>
-                          <li><button class="navigation" ng-click="does($event)">LOGIN</button></li>
-                          <li><button class="navigation" ng-click="does($event)">REGISTER</button></li>
+                          <li><button class="navigation current-selection" ng-click="goTo('/route')"  >Home</button></li>
+                          <li><button class="navigation" ng-click="goTo('/login')">LOGIN</button></li>
+                          <li><button class="navigation" ng-click="goTo('/register')">REGISTER</button></li>
 
                      </ul>
                  </div>
@@ -22,7 +22,7 @@
           <div class="mview-content">
               <h3 class="article-title">Ads</h3>
               <ul >
-                  <li ng-repeat="ad in allAds.ads" class="">
+                  <li ng-repeat="ad in allAds.ads|filter:{categoryId:catId,townId:townsId}" class="">
                         <div class="add">
                              <div class="row">
                                  <h4 class="col-md-8 m-name"><strong> {{ad.title}}</strong></h4>
@@ -47,12 +47,30 @@
           <div class="mview-content">
               <h3 class="article-title">Categories</h3>
               <hr/>
+                <div class="view-element">
                   <ul>
-                      <li ng-repeat="category in category.ads" class="">
+                      <li>
+                          <button class="navigation current-selection-cat" ng-click="putCategoryId($event,'')" >All</button>
+                      </li>
+                      <li ng-repeat="category in categories | orderBy: 'name'" class="">
+                          <button class="navigation" ng-click="putCategoryId($event,category.id)">{{category.name}}</button>
                       </li>
                   </ul>
-          </div>
+                    <h3 class="article-title">Towns</h3>
+                    <hr/>
+                    <div class="view-element">
+                        <ul>
+                            <li>
+                                <button class="navigation current-selection-tow" ng-click="putTownId($event,'')">All</button>
+                            </li>
+                            <li ng-repeat="town in towns | orderBy: 'name'" class="">
+                                <button class="navigation" ng-click="putTownId($event,town.id)">{{town.name}}</button>
+                            </li>
+                        </ul>
+                   </div>
+              </div>
           </div>
      </div>
+   </div>
     <script></script>
 </section>

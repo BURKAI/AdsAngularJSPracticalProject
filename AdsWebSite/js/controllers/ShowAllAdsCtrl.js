@@ -3,19 +3,58 @@
  */
 'use strict';
 
-AdsApp.controller('ShowAllAdsCtrl',[ '$scope','testData', function($scope, testData) {
+AdsApp.controller('ShowAllAdsCtrl',[
+    '$location',
+    '$scope',
+    'adsData',
+    'categoryData',
+    'townsData',
+     function(
+         $location,
+         $scope,
+         adsData,
+         categoryData,
+         townsData) {
 
-    testData.getTestData(function(data){
+     $scope.catId='';
+     $scope.townsId='';
 
+    adsData.getTestData().then(function(data){
         //alert(JSON.stringify(data));
-
         $scope.allAds=data;
-
     });
-    $scope.greeting = 'Hello World!';
-    $scope.does= function($event){
 
-    $('.current-selection').removeClass('current-selection');
-    $($event.target).addClass('current-selection');
+    categoryData.getCategories().then(function(data){
+       //alert(JSON.stringify(data));
+        $scope.categories=data;
+    });
+
+    townsData.getTowns().then(function(data){
+           //  alert(JSON.stringify(data));
+     $scope.towns=data;
+     });
+
+
+    $scope.goTo= function(stringPath){
+
+   $location.path(stringPath);
     }
+
+     $scope.putCategoryId=function($event,catId){
+           // alert(catId);
+            $scope.catId=catId;
+       //  alert($scope.catId+ '----' +$scope.townsId);
+         $('.current-selection-cat').removeClass('current-selection-cat');
+         $($event.target).addClass('current-selection-cat');
+     }
+
+      $scope.putTownId=function($event,townId){
+
+          $scope.townsId=townId;
+      //    alert($scope.catId+ '----' +$scope.townsId);
+          $('.current-selection-tow').removeClass('current-selection-tow');
+          $($event.target).addClass('current-selection-tow');
+      }
+
+
 }]);

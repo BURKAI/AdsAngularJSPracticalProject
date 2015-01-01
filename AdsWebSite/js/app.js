@@ -9,9 +9,9 @@ var AdsApp = angular
                 templateUrl:'templates/views/home.html',
                 controller:'ShowAllAdsCtrl'
             })
-            .when('/next',{
-                    templateUrl:'templates/views/next.html',
-                    controller:'ShowAllAdsCtrl'
+            .when('/register',{
+                    templateUrl:'templates/views/register.html',
+                    controller:'RegisterCtrl'
                 })
             .otherwise({redirectTo:'/route'});
         })
