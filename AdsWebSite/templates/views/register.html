@@ -10,7 +10,6 @@
                         <li><button class="navigation" ng-click="goTo('/route')"  >Home</button></li>
                         <li><button class="navigation" ng-click="goTo('/login')">LOGIN</button></li>
                         <li><button class="navigation current-selection" ng-click="goTo('/register')">REGISTER</button></li>
-
                     </ul>
                 </div>
                 <hr/>
@@ -42,9 +41,9 @@
                            <label>Phone</label>&nbsp;&nbsp;
                            <input type="text" placeholder="enter your phone" ng-model="regData.phone"></input><br>
                            <label>Town</label>&nbsp;&nbsp;
-                           <select value="choose town">
-                               <option ng-model="regData.townId">choose town<option>
-                                <option ng-repeat="town in towns | orderBy: 'name'">{{town.name}}</option>
+                           <select  ng-model="regData.townId" >
+                                <option value="0">choose town<option>
+                                <option ng-repeat="town in towns | orderBy: 'name'" value="{{town.id}}" >{{town.name}}</option>
                            </select>
                          </div>
                    </div>

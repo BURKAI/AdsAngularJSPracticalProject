@@ -20,7 +20,7 @@ AdsApp.controller('RegisterCtrl',[
             "name": "",
             "email": "",
             "phone": "",
-            "townId": 1
+            "townId":0
         }
 
         $scope.regData=regData;
@@ -31,6 +31,7 @@ AdsApp.controller('RegisterCtrl',[
         });
 
         $scope.registerTo=function(){
+
             //swtch za prazni validacii i drugi raboti
             if(regData.password!=regData.confirmPassword){
                 alert('Diftrent passwords');

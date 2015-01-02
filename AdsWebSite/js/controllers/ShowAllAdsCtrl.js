@@ -20,17 +20,14 @@ AdsApp.controller('ShowAllAdsCtrl',[
      $scope.townsId='';
 
     adsData.getTestData().then(function(data){
-        //alert(JSON.stringify(data));
         $scope.allAds=data;
     });
 
     categoryData.getCategories().then(function(data){
-       //alert(JSON.stringify(data));
         $scope.categories=data;
     });
 
     townsData.getTowns().then(function(data){
-           //  alert(JSON.stringify(data));
      $scope.towns=data;
      });
 
@@ -41,17 +38,13 @@ AdsApp.controller('ShowAllAdsCtrl',[
     }
 
      $scope.putCategoryId=function($event,catId){
-           // alert(catId);
-            $scope.catId=catId;
-       //  alert($scope.catId+ '----' +$scope.townsId);
+         $scope.catId=catId;
          $('.current-selection-cat').removeClass('current-selection-cat');
          $($event.target).addClass('current-selection-cat');
      }
 
       $scope.putTownId=function($event,townId){
-
           $scope.townsId=townId;
-      //    alert($scope.catId+ '----' +$scope.townsId);
           $('.current-selection-tow').removeClass('current-selection-tow');
           $($event.target).addClass('current-selection-tow');
       }

@@ -1,0 +1,51 @@
+<section>
+
+    <div class="row gview">
+        <div class="col-md-3 mview">
+            <div class="mview-content">
+                <div class="view-element"><h3>Navigation</h3></div>
+                <hr/>
+                <div class="view-element">
+                    <ul>
+                        <li><button class="navigation" ng-click="goTo('/route')"  >Home</button></li>
+                        <li><button class="navigation current-selection" ng-click="goTo('/login')">LOGIN</button></li>
+                        <li><button class="navigation" ng-click="goTo('/register')">REGISTER</button></li>
+                    </ul>
+                </div>
+                <hr/>
+                <div class="view-element"><h5>To publish a new ad, please login.
+                </h5></div>
+            </div>
+        </div>
+        <div class="col-md-4 mview ">
+            <div class="mview-content">
+                <h3 class="article-title">Login</h3>
+                <div class="line"></div>
+                <br/>
+                <form class="reg-form" >
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>UserName</label>
+                            <input type="text" placeholder="put your name here" ng-model="logData.username"></input><br>
+                            <label>Password</label>
+                            <input type="password" placeholder="enter your password" ng-model="logData.password"></input><br>
+
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-5 pull-right">
+                            <button class="decor" ng-click="loginTo()">Login</button>
+                        </div>
+                        <div class="col-md-5 pull-right">
+                            <button class="decor" ng-click="goTo('/register')">Register</button>
+                        </div>
+                    </div><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>

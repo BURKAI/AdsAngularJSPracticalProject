@@ -30,19 +30,23 @@ li{
     margin: 5px;
 }
 .head{
-    background-color: rgba(240,240,240,1);
+    background-color: rgba(140,140,140,1);
     font-family: CorporativeFont;
     border-corner-shape:bevel;
     border-bottom-left-radius: 20px;
 }
 
-.head h2{
-    vertical-align:middle;
+h3 {
+    color: #576374;
+}
+
+.head h1{
+    color:#a1d9f2;
 }
 
 .head img{
    right:-15px;
-
+    opacity: 0.9;
 }
 
 .foot{
@@ -131,6 +135,13 @@ hr{
 
 }
 
+
+.filters{
+    border:0px;
+    color: #747aa7;
+}
+
+
 .article-title{
     text-align: center;
 }
@@ -163,3 +174,25 @@ form button{
     padding: 2px;
 }
 
+.bordered{
+/ border:1px solid red;
+    padding: 2px;
+    margin:2px;
+    text-align: center;
+
+
+}
+
+
+.bordered img{,
+    width:100%;
+    margin-top:10px;
+}
+.bordered input{
+width:100%;
+    margin-top:10px;
+}
+.bordered textarea{
+ width:100%;
+     margin-top:10px;
+ }

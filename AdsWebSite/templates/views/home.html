@@ -50,10 +50,10 @@
                 <div class="view-element">
                   <ul>
                       <li>
-                          <button class="navigation current-selection-cat" ng-click="putCategoryId($event,'')" >All</button>
+                          <button class="navigation filters current-selection-cat" ng-click="putCategoryId($event,'')" >All</button>
                       </li>
                       <li ng-repeat="category in categories | orderBy: 'name'" class="">
-                          <button class="navigation" ng-click="putCategoryId($event,category.id)">{{category.name}}</button>
+                          <button class="navigation filters" ng-click="putCategoryId($event,category.id)">{{category.name}}</button>
                       </li>
                   </ul>
                     <h3 class="article-title">Towns</h3>
@@ -61,10 +61,10 @@
                     <div class="view-element">
                         <ul>
                             <li>
-                                <button class="navigation current-selection-tow" ng-click="putTownId($event,'')">All</button>
+                                <button class="navigation filters current-selection-tow" ng-click="putTownId($event,'')">All</button>
                             </li>
                             <li ng-repeat="town in towns | orderBy: 'name'" class="">
-                                <button class="navigation" ng-click="putTownId($event,town.id)">{{town.name}}</button>
+                                <button class="navigation filters" ng-click="putTownId($event,town.id)">{{town.name}}</button>
                             </li>
                         </ul>
                    </div>

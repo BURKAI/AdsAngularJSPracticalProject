@@ -13,6 +13,18 @@ var AdsApp = angular
                     templateUrl:'templates/views/register.html',
                     controller:'RegisterCtrl'
                 })
+                .when('/login',{
+                    templateUrl:'templates/views/login.html',
+                    controller:'LoginCtrl'
+                })
+                .when('/user/home',{
+                    templateUrl:'templates/views/homeUser.html',
+                    controller:'ShowAllAdsCtrl'
+                })
+                .when('/user/addAd',{
+                    templateUrl:'templates/views/addAd.html'
+                   // controller:'ShowAllAdsCtrl'
+                })
             .otherwise({redirectTo:'/route'});
         })
     .constant('autor','Poullo Oconne');

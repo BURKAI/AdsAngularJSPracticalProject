@@ -1,0 +1,76 @@
+
+<section >
+    <div class="row gview">
+        <div class="col-md-3 mview">
+            <div class="mview-content">
+                <div class="view-element"><h3>Navigation</h3></div>
+                <hr/>
+                <div class="view-element">
+                    <ul>
+                        <li><button class="navigation current-selection" ng-click="goTo('/route')"  >Home</button></li>
+                        <li><button class="navigation" ng-click="goTo('/....')">My Ads</button></li>
+                        <li><button class="navigation" ng-click="goTo('/user/addAd')">Publish new add</button></li>
+                        <li><button class="navigation" ng-click="goTo('/.....')">Edit profile</button></li>
+                    </ul>
+                </div>
+                <hr/>
+                <div class="view-element"><h5>To publish a new ad, please login.
+                </h5></div>
+            </div>
+        </div>
+        <div class="col-md-6 mview ">
+            <div class="mview-content">
+                <h3 class="article-title">Ads</h3>
+                <ul >
+                    <li ng-repeat="ad in allAds.ads|filter:{categoryId:catId,townId:townsId}" class="">
+                        <div class="add">
+                            <div class="row">
+                                <h4 class="col-md-8 m-name"><strong> {{ad.title}}</strong></h4>
+                                <span class="col-md-3 pull-right m-date">{{ad.date | date: 'd-MMM-yyyy'}}</span>
+                            </div>
+                            <div class="line"></div>
+                            <div class="row">
+                                <div class="col-md-4"><img  class="mgi" ng-src="{{ad.imageDataUrl}}"></div>
+                                <div class="col-md-8">
+                                    <h5 class="textInfo">{{ad.text}}</h5>
+                                    <h5><strong>Name: &nbsp;</strong>{{ad.ownerName}}</h5>
+                                    <h5><strong>Email:&nbsp;&nbsp; </strong>{{ad.ownerEmail}}</h5>
+                                    <h5><strong>Phone: </strong>{{ad.ownerPhone}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 mview">
+            <div class="mview-content">
+                <h3 class="article-title">Categories</h3>
+                <hr/>
+                <div class="view-element">
+                    <ul>
+                        <li>
+                            <button class="navigation filters current-selection-cat" ng-click="putCategoryId($event,'')" >All</button>
+                        </li>
+                        <li ng-repeat="category in categories | orderBy: 'name'" class="">
+                            <button class="navigation filters" ng-click="putCategoryId($event,category.id)">{{category.name}}</button>
+                        </li>
+                    </ul>
+                    <h3 class="article-title">Towns</h3>
+                    <hr/>
+                    <div class="view-element">
+                        <ul>
+                            <li>
+                                <button class="navigation filters current-selection-tow" ng-click="putTownId($event,'')">All</button>
+                            </li>
+                            <li ng-repeat="town in towns | orderBy: 'name'" class="">
+                                <button class="navigation filters" ng-click="putTownId($event,town.id)">{{town.name}}</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script></script>
+</section>
