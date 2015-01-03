@@ -15,6 +15,8 @@ AdsApp.controller('NewAdCtrl',[
         townsData,
         categoryData) {
 
+        $scope.buttonName = 'Browse...';
+
         var newAdData={
             "title": "",
             "text": "",
@@ -22,6 +24,10 @@ AdsApp.controller('NewAdCtrl',[
             "categoryId": 0,
             "townId": 0
         }
+
+   //     $scope.getBase64 = function (base64String, attrs) {
+   //         $scope.newAdData.imageDataURL = base64String;
+    //    };
 
         $scope.newAdData=newAdData;
 
@@ -38,7 +44,10 @@ AdsApp.controller('NewAdCtrl',[
         }
 
         $scope.addAd=function(){
-                newAdsData.postRegistration(newAdData);
+                newAdsData.postNewAd(newAdData);
         }
+
+
+
 
     }]);

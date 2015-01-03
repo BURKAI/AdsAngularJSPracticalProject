@@ -13,12 +13,12 @@ AdsApp.factory('newAdsData',['$http','$q','$location',function($http,$q,$locatio
                 data:newAdData})
                 .success(function(data, status, headers, config){
                     defer.resolve(data);
-                  //  swal("Welcome, "+data.username+'!', "It's pretty, isn't it?");
-                  //  $location.path('/user/home');
+                    swal("Dear, "+data.username+' your ad is sent for approval!', "It's cool, isn't it?");
+                   $location.path('/user/addAd');
                 })
                 .error(function(data, status, headers, config){
-                    defer.reject(data);
-                    sweetAlert("Oops...", "Something went wrong! Try again!", "error");
+                    defer.reject(data); //"Something went wrong! Try again!"
+                    sweetAlert("Oops...", JSON.stringify(data), "error");
                 });
             return defer.promise;
         }

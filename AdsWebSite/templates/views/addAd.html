@@ -24,69 +24,63 @@
                 <div class="line"></div>
                 <form>
                     <div clas="row bordered">
-                    <div class="col-md-8 bordered">
+                         <div class="col-md-8 bordered">
+                            <div class="row bordered">
+                                  <div class="col-md-4 bordered">
+                                      <label>Title</label>
+                                  </div>
+                                  <div class="col-md-7 bordered">
+                                      <input required="required" type="text" ng-model="newAdData.title" placeholder="Put title here"/>
+                                  </div>
+                         </div>
                     <div class="row bordered">
-
-                          <div class="col-md-4 bordered">
-                              <label>Title</label>
-                          </div>
-                          <div class="col-md-7 bordered">
-                              <input type="text"/>
-                          </div>
-
-                    </div>
-                    <div class="row bordered">
-
                         <div class="col-md-4 bordered">
                             <label>Text</label>
                         </div>
                         <div class="col-md-7 bordered">
-                            <textarea type="text"/>
+                            <textarea required="required" type="text" ng-model="newAdData.text" placeholder="Put text info here"/>
                         </div>
-
                     </div>
                     <div class="row bordered">
-
                         <div class="col-md-4 bordered">
                             <label>Image</label>
                         </div>
                         <div class="col-md-7 bordered">
-                            <input type="text"/>
+                              <input type="text" ng-model="newAdData.imageDataURL" placeholder="Put text info here"/>
                         </div>
-
                     </div>
-                   </div>
-                    <div class="col-md-3 bordered">
-                        <img ng-src="" ><img>
-                        <button class="decor">Browse...</button>
+                       </div>
+                        <div class="col-md-3 bordered">
+                            <img  ng-src="{{newAdData.imageDataURL}}" ><img>
+                            <div class="fileUpload btn btn-primary">
+                                <span>Upload</span>
+                                <input type="file" upload-img class="decor upload" accept ="image/*" placeholder="Browse for image..."/>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-
                     <div class="row bordered">
-                            <div class="col-md-5 bordered">
-                                <label>Category</label><select>
-                                <option>ddddd</option>
+                            <div class="col-md-6 bordered">
+                                <label>Category</label>
+                                <select  ng-model="newAdData.categoryId" >
+                                    <option value="0">choose category</option>
+                                    <option ng-repeat="cat in categories | orderBy: 'name'" value="{{cat.id}}" >{{cat.name}}</option>
                                 </select>
                             </div>
                             <div class="col-md-5 bordered">
-                                <label>Town</label><select>
-                                <option>ddddd</option>
-                                </select>
+                                <label>Town</label>
+                                <select  ng-model="newAdData.townId" >
+                                    <option value="0">choose town</option>
+                                    <option ng-repeat="town in towns | orderBy: 'name'" value="{{town.id}}" >{{town.name}}</option>
+                                 </select>
+
                             </div>
-                            <br/>
-
-
+                         <br/>
                     </div>
                     <button class="decor">Cancel</button>
-                    <button class="decor">Publish</button>
+                    <button class="decor" ng-click="addAd()">Publish</button>
+
                  </form>
-
-
             </div>
         </div>
-
-
-
     </div>
-
 </section>

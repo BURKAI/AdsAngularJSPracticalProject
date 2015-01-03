@@ -22,9 +22,12 @@ var AdsApp = angular
                     controller:'ShowAllAdsCtrl'
                 })
                 .when('/user/addAd',{
-                    templateUrl:'templates/views/addAd.html'
-                   // controller:'ShowAllAdsCtrl'
+                    templateUrl:'templates/views/addAd.html',
+                    controller:'NewAdCtrl'
                 })
             .otherwise({redirectTo:'/route'});
         })
-    .constant('autor','Poullo Oconne');
+    .constant('autor','Poullo Oconne')
+    .constant('baseUrl', 'http://softuni-ads.azurewebsites.net/api')
+    .constant('pageSize', 3);
+    ;
