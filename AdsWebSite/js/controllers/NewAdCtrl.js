@@ -17,6 +17,8 @@ AdsApp.controller('NewAdCtrl',[
 
         $scope.buttonName = 'Browse...';
 
+
+
         var newAdData={
             "title": "",
             "text": "",

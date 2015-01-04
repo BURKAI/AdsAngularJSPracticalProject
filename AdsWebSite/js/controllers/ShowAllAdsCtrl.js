@@ -19,6 +19,10 @@ AdsApp.controller('ShowAllAdsCtrl',[
      $scope.catId='';
      $scope.townsId='';
 
+    //  alert(sessionStorage.getItem('username')+"==="+sessionStorage.getItem('accessKey'));
+
+
+
     adsData.getTestData().then(function(data){
         $scope.allAds=data;
     });

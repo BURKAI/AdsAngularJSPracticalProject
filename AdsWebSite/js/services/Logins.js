@@ -2,7 +2,9 @@
  * Created by Poullo on 1/2/2015.
  */
 
-AdsApp.factory('loginData',['$http','$q','$location',function($http,$q,$location){
+AdsApp.factory('loginData',['$http','$q','$location','baseUrl',function($http,$q,$location,baseUrl){
+
+    var userInfo={};
 
     return {
         postLogination:function(logData){
@@ -10,12 +12,18 @@ AdsApp.factory('loginData',['$http','$q','$location',function($http,$q,$location
             var defer=$q.defer();
             $http({
                 method:'POST',
-                url:'http://softuni-ads.azurewebsites.net/api/user/Login',
+                url:baseUrl+'/user/Login',
                 data:logData})
                 .success(function(data, status, headers, config){
+
                     defer.resolve(data);
+
+                    sessionStorage["username"] = data.username;
+                    sessionStorage["accessKey"] = JSON.stringify(data.access_token);
+
                     swal("Welcome, "+data.username+'!', "It's pretty, isn't it?");
                     $location.path('/user/home');
+
                 })
                 .error(function(data, status, headers, config){
                     defer.reject(data);

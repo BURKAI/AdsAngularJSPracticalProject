@@ -2,10 +2,14 @@ AdsApp.controller('LoginCtrl',[
     '$location',
     '$scope',
     'loginData',
+    'auth',
+    'identity',
     function(
         $location,
         $scope,
-        loginData) {
+        loginData,
+        auth,
+        identity) {
 
         var logData={
             "username": "",
@@ -21,8 +25,16 @@ AdsApp.controller('LoginCtrl',[
               swal('There is empty fields, pleasse fill all fields!')
             }else
             {
-                loginData.postLogination(logData);
-
+               // loginData.postLogination(logData);
+                auth.login(logData).then(function(success) {
+                    if (success) {
+                     alert('success');
+                        $location.path('/user/home');
+                    }
+                    else {
+                       alert('error');
+                    }
+                });
             }
         }
 

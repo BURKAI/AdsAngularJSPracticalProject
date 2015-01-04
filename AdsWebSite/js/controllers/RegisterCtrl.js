@@ -7,11 +7,13 @@ AdsApp.controller('RegisterCtrl',[
     '$scope',
     'registerData',
     'townsData',
+    'auth',
     function(
         $location,
         $scope,
         registerData,
-        townsData) {
+        townsData,
+        auth) {
 
         var regData={
             "username": "",
@@ -37,7 +39,8 @@ AdsApp.controller('RegisterCtrl',[
                 alert('Diftrent passwords');
             }
             else{
-            registerData.postRegistration(regData);
+            //registerData.postRegistration(regData);
+                auth.signup(regData);
            }
         }
 

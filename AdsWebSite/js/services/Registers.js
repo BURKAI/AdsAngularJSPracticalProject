@@ -14,11 +14,11 @@ AdsApp.factory('registerData',['$http','$q',function($http,$q){
                    data:regData})
                 .success(function(data, status, headers, config){
                     defer.resolve(data);
-                    alert('success');
+
                 })
                 .error(function(data, status, headers, config){
                     defer.reject(data);
-                    alert('error');
+
                 });
             return defer.promise;
         }

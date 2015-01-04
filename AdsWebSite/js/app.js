@@ -3,7 +3,7 @@
  */
 
 var AdsApp = angular
-    .module('AdsApp', ['ngRoute'])
+    .module('AdsApp', ['ngRoute','ngCookies'])
     .config(function($routeProvider){
             $routeProvider.when('/route',{
                 templateUrl:'templates/views/home.html',

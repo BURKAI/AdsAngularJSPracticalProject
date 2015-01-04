@@ -12,6 +12,10 @@ img[ng-src='']{
     content:url("../img/noimg.png");
 }
 
+.top-border{
+    height:10px;
+    background-color: #74717b;
+}
 
 .mgi{
 
@@ -115,17 +119,17 @@ hr{
 
 .current-selection, .current-selection-cat, .current-selection-tow, .decor{
 
-    background-color: hsl(0, 69%, 22%) !important;
+    background-color: hsl(240, 6%, 22%) !important;
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b42121", endColorstr="#5e1111");
-    background-image: -khtml-gradient(linear, left top, left bottom, from(#b42121), to(#5e1111));
-    background-image: -moz-linear-gradient(top, #b42121, #5e1111);
-    background-image: -ms-linear-gradient(top, #b42121, #5e1111);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b42121), color-stop(100%, #5e1111));
-    background-image: -webkit-linear-gradient(top, #b42121, #5e1111);
-    background-image: -o-linear-gradient(top, #b42121, #5e1111);
-    background-image: linear-gradient(#b42121, #5e1111);
-    border-color: #5e1111 #5e1111 hsl(0, 69%, 16%);
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#484852), to(#36363d));
+    background-image: -moz-linear-gradient(top, #484852, #36363d);
+    background-image: -ms-linear-gradient(top, #484852, #36363d);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484852), color-stop(100%, #36363d));
+    background-image: -webkit-linear-gradient(top, #484852, #36363d);
+    background-image: -o-linear-gradient(top, #484852, #36363d);
+    background-image: linear-gradient(#484852, #36363d);
+   / border-color: #5e1111 #5e1111 hsl(240, 6%, 30%);
     color: #fff !important;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
     -webkit-font-smoothing: antialiased;
@@ -138,12 +142,15 @@ hr{
 
 .filters{
     border:0px;
-    color: #747aa7;
+    color: #6f697e;
+
 }
 
 
 .article-title{
     text-align: center;
+    background-color: #d8d8d8;
+    padding: 5px;
 }
 
 .textInfo{
