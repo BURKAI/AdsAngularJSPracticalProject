@@ -63,13 +63,12 @@
                                     </div>
                                 </div>
                             </div>
-
                           </div>
                             <div class="col-md-3 article-title status">
                                 <h4>Status</h4>
                                 <div class="line"></div>
                                 <p>{{ad.status}}</p>
-                                <button>Deactivate</button>
+                                <button value="{{ad.id}}" ng-click="deactivate($event,ad.id)" >Deactivate</button>
                             </div>
                         </li>
                     </ul>

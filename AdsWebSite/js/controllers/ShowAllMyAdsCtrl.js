@@ -7,14 +7,11 @@ AdsApp.controller('ShowAllMyAdsCtrl',[
     '$location',
     '$scope',
     'newAdsData',
-    'categoryData',
-    'townsData',
     function(
         $location,
         $scope,
-        newAdsData,
-        categoryData,
-        townsData) {
+        newAdsData
+    ) {
 
 //        $scope.publishet='';
 //        $scope.waiting='';
@@ -36,6 +33,15 @@ AdsApp.controller('ShowAllMyAdsCtrl',[
         $scope.goTo= function(stringPath){
 
             $location.path(stringPath);
+        }
+
+        $scope.deactivate=function($event,id){
+
+            newAdsData.deactivate(id).then(function(success){
+                if(success){
+                $($event.target).hide();
+                $($event.target).parent().find('p').text('Inactive');}
+            });
         }
 
     }]);

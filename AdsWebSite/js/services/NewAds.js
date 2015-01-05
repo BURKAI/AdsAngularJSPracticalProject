@@ -22,7 +22,7 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
                     defer.resolve(data);
 
                     swal('Your ad is sent for approval!', "It's good, isn't it?");
-                   $location.path('/user/addAd');
+
                    $scope.newAdData={
                        "title": "",
                        "text": "",
@@ -30,6 +30,7 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
                        "categoryId": 0,
                        "townId": 0
                    };
+                    $location.path('/user/addAd');
                 })
                 .error(function(data, status, headers, config){
                     defer.reject(data); //"Something went wrong! Try again!"
@@ -49,20 +50,42 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
             })
                 .success(function(data, status, headers, config){
                     defer.resolve(data);
-                   //  alert(JSON.stringify(data));
-                    //swal('Your ad is sent for approval!', "It's good, isn't it?");
-                   // $location.path('/user/addAd');
+
                 })
                 .error(function(data, status, headers, config){
-                    defer.reject(data); //"Something went wrong! Try again!"
-                    sweetAlert("Oops...", JSON.stringify(data), "error");
+                    defer.reject(data); //
+                    sweetAlert("Oops...", "Something went wrong! Try again!", "error");
 
                 });
 
             return defer.promise;
+        },
+
+        deactivate:function(id){
+
+            var defer=$q.defer();
+            $http({
+                method: 'PUT',
+                url: 'http://softuni-ads.azurewebsites.net/api/user/Ads/Deactivate/'+id,
+                headers: headers
+            })
+                .success(function(data, status, headers, config){
+                    defer.resolve(data);
+                    alert('Deactivation complete');
+                  //  $('button').hide();
+                    $location.path('/user/myAds');
+                })
+                .error(function(data, status, headers, config){
+                    defer.reject(data); //
+                    sweetAlert("Oops...","Something went wrong! Try again!" , "error");
+
+                });
+
+            return defer.promise;
+
         }
 
-        
+
 
 
 
