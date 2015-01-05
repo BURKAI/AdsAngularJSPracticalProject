@@ -25,6 +25,10 @@ var AdsApp = angular
                     templateUrl:'templates/views/addAd.html',
                     controller:'NewAdCtrl'
                 })
+                .when('/user/myAds',{
+                    templateUrl:'templates/views/MyAds.html',
+                    controller:'ShowAllMyAdsCtrl'
+                })
             .otherwise({redirectTo:'/route'});
         })
     .constant('autor','Poullo Oconne')

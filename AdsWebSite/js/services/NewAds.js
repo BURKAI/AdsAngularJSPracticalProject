@@ -33,7 +33,26 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
             return defer.promise;
         },
         getAllMyAds:function(){
-            
+            var defer=$q.defer();
+            $http({
+                method: 'GET',
+                url: 'http://softuni-ads.azurewebsites.net/api/user/Ads',
+                status: 0,
+                headers: headers
+            })
+                .success(function(data, status, headers, config){
+                    defer.resolve(data);
+                   //  alert(JSON.stringify(data));
+                    //swal('Your ad is sent for approval!', "It's good, isn't it?");
+                   // $location.path('/user/addAd');
+                })
+                .error(function(data, status, headers, config){
+                    defer.reject(data); //"Something went wrong! Try again!"
+                    sweetAlert("Oops...", JSON.stringify(data), "error");
+
+                });
+
+            return defer.promise;
         }
     }
 

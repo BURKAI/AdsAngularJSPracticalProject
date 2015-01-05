@@ -19,10 +19,6 @@ AdsApp.controller('ShowAllAdsCtrl',[
      $scope.catId='';
      $scope.townsId='';
 
-    //  alert(sessionStorage.getItem('username')+"==="+sessionStorage.getItem('accessKey'));
-
-
-
     adsData.getTestData().then(function(data){
         $scope.allAds=data;
     });
@@ -32,13 +28,12 @@ AdsApp.controller('ShowAllAdsCtrl',[
     });
 
     townsData.getTowns().then(function(data){
-     $scope.towns=data;
+        $scope.towns=data;
      });
-
 
     $scope.goTo= function(stringPath){
 
-   $location.path(stringPath);
+        $location.path(stringPath);
     }
 
      $scope.putCategoryId=function($event,catId){
@@ -52,6 +47,12 @@ AdsApp.controller('ShowAllAdsCtrl',[
           $('.current-selection-tow').removeClass('current-selection-tow');
           $($event.target).addClass('current-selection-tow');
       }
+
+      $scope.goToMyAds=function(){
+          $location.path('/user/MyAds');
+      }
+
+
 
 
 }]);
