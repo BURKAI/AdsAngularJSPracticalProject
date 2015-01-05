@@ -16,7 +16,10 @@ AdsApp.controller('ShowAllMyAdsCtrl',[
         categoryData,
         townsData) {
 
-
+//        $scope.publishet='';
+//        $scope.waiting='';
+//        $scope.inaktive='';
+        $scope.status='';
 
      //$('.console').text(JSON.stringify( newAdsData.getAllMyAds()));
 
@@ -24,6 +27,15 @@ AdsApp.controller('ShowAllMyAdsCtrl',[
             $scope.allMyAds=data;
         });
 
+        $scope.putStatus=function($event,status){
+            $scope.status=status;
+            $('.current-selection-ad-filt').removeClass('current-selection-ad-filt');
+            $($event.target).addClass('current-selection-ad-filt');
+        }
 
+        $scope.goTo= function(stringPath){
+
+            $location.path(stringPath);
+        }
 
     }]);

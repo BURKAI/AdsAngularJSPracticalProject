@@ -7,7 +7,7 @@
                 <hr/>
                 <div class="view-element">
                     <ul>
-                        <li><button class="navigation" ng-click="goTo('/route')"  >Home</button></li>
+                        <li><button class="navigation" ng-click="goTo('/user/home')"  >Home</button></li>
                         <li><button class="navigation current-selection" ng-click="goTo('/user/myAds')">My Ads</button></li>
                         <li><button class="navigation" ng-click="goTo('/user/addAd')">Publish new add</button></li>
                         <li><button class="navigation" ng-click="goTo('/.....')">Edit profile</button></li>
@@ -19,10 +19,19 @@
                 <div class="view-element">
                     <ul>
                         <li>
-                            <button class="navigation filters current-selection-cat" ng-click="putCategoryId($event,'')" >All</button>
+                            <button class="navigation filters current-selection-ad-filt" ng-click="putStatus($event,'')" >All</button>
                         </li>
-                        <li ng-repeat="category in categories | orderBy: 'name'" class="">
-                            <button class="navigation filters" ng-click="putCategoryId($event,category.id)">{{category.name}}</button>
+                        <li>
+                            <button class="navigation filters" ng-click="putStatus($event,'Published')" >Published</button>
+                        </li>
+                        <li>
+                            <button class="navigation filters" ng-click="putStatus($event,'WaitingApproval')" >Waitng Aprooval</button>
+                        </li>
+                        <li>
+                            <button class="navigation filters" ng-click="putStatus($event,'Inactive')" >Inaktive</button>
+                        </li>
+                        <li>
+                            <button class="navigation filters" ng-click="putStatus($event,'Rejected')" >Rejected</button>
                         </li>
                     </ul>
                  </div>
@@ -37,7 +46,7 @@
                 <h3 class="article-title">My Ads</h3>
 
                     <ul >
-                        <li ng-repeat="ad in allMyAds.ads" class="">
+                        <li ng-repeat="ad in allMyAds.ads | filter:{status:status}" class="">
                             <div class="col-md-9">
                             <div class="add">
                                 <div class="row">
@@ -57,17 +66,17 @@
 
                           </div>
                             <div class="col-md-3 article-title status">
-                                <h5>Status</h5>
+                                <h4>Status</h4>
                                 <div class="line"></div>
                                 <p>{{ad.status}}</p>
                                 <button>Deactivate</button>
                             </div>
                         </li>
                     </ul>
-
-
-
             </div>
         </div>
     </div>
 </section>
+    <!--    <div>
+            <p>{{allMyAds}}</p>
+        </div> --!>

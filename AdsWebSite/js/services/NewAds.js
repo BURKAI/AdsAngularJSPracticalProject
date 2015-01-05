@@ -23,6 +23,13 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
 
                     swal('Your ad is sent for approval!', "It's good, isn't it?");
                    $location.path('/user/addAd');
+                   $scope.newAdData={
+                       "title": "",
+                       "text": "",
+                       "imageDataURL": "",
+                       "categoryId": 0,
+                       "townId": 0
+                   };
                 })
                 .error(function(data, status, headers, config){
                     defer.reject(data); //"Something went wrong! Try again!"
@@ -37,7 +44,7 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
             $http({
                 method: 'GET',
                 url: 'http://softuni-ads.azurewebsites.net/api/user/Ads',
-                status: 0,
+                status: '',
                 headers: headers
             })
                 .success(function(data, status, headers, config){
@@ -54,6 +61,11 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
 
             return defer.promise;
         }
+
+        
+
+
+
     }
 
 }]);

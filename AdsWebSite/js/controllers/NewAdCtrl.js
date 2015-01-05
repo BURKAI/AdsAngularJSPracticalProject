@@ -29,7 +29,7 @@ AdsApp.controller('NewAdCtrl',[
 
    //     $scope.getBase64 = function (base64String, attrs) {
    //         $scope.newAdData.imageDataURL = base64String;
-    //    };
+   //    };
 
         $scope.newAdData=newAdData;
 
