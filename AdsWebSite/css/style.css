@@ -68,6 +68,7 @@ h3 {
    / border-top-left-radius: 20px;
     border:1px solid #BDBDE8;
     background-color: rgba(225,225,225,1);
+    overflow: hidden;
 }
 
 .gview{

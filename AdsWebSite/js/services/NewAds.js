@@ -3,13 +3,12 @@
  */
 AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl','identity',function($http,$q,$location,authorization,baseUrl,identity){
 
-   // alert(sessionStorage.getItem('username')+'----'+sessionStorage.getItem('accessKey'))
 
     var headers = authorization.getAuthorizationHeader();
 
-    alert(JSON.stringify(headers)+'-----------------'+JSON.stringify(identity.getCurrentUser()));
     return {
         postNewAd:function(newAdData){
+
 
             var defer=$q.defer();
             $http({
@@ -21,7 +20,8 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
                   })
                 .success(function(data, status, headers, config){
                     defer.resolve(data);
-                    swal("Dear, "+data.username+' your ad is sent for approval!', "It's good, isn't it?");
+
+                    swal('Your ad is sent for approval!', "It's good, isn't it?");
                    $location.path('/user/addAd');
                 })
                 .error(function(data, status, headers, config){
@@ -29,7 +29,11 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
                    sweetAlert("Oops...", JSON.stringify(data), "error");
 
                 });
+
             return defer.promise;
+        },
+        getAllMyAds:function(){
+            
         }
     }
 

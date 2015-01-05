@@ -5,10 +5,10 @@
 
 AdsApp.factory('authorization', ['identity', function(identity) {
     var headers = {};
-
+    var currentUser = identity.getCurrentUser();
     return {
         getAuthorizationHeader: function() {
-            var currentUser = identity.getCurrentUser();
+
             if (currentUser) {
                 this.setAuthorizationHeader(currentUser['access_token']);
             }
@@ -16,10 +16,11 @@ AdsApp.factory('authorization', ['identity', function(identity) {
             return headers;
         },
         setAuthorizationHeader: function(auth) {
-            headers['Authorization'] =  auth;
+            headers['Authorization'] = 'Bearer ' + auth;
         },
         removeAuthorizationHeader: function() {
             delete headers['Authorization'];
-        }
+        },
+        userName:currentUser['username']
     }
 }]);

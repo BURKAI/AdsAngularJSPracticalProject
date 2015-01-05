@@ -3,8 +3,19 @@
  */
 'use strict';
 
-AdsApp.factory('auth', ['$http', '$q', 'identity', 'authorization',  'baseUrl', function($http, $q, identity, authorization, baseUrl) {
-    var usersApi = baseUrl + '/user'
+AdsApp.factory('auth', ['$http',
+                        '$q',
+                        'identity',
+                        'authorization',
+                        'baseUrl',
+                        '$location', function(
+                            $http,
+                            $q,
+                            identity,
+                            authorization,
+                            baseUrl,
+                             $location) {
+                        var usersApi = baseUrl + '/user'
 
     return {
         signup: function(user) {
@@ -16,7 +27,8 @@ AdsApp.factory('auth', ['$http', '$q', 'identity', 'authorization',  'baseUrl', 
                 data:user})
                 .success(function() {
                     deferred.resolve();
-                    swal("Congratulations your registration was successfull!", "It's cool, isn't it?");
+                    swal("Congratulations your registration was successfull!/t Please login!", "It's cool, isn't it?");
+                    $location.path('/login');
                 })
                 .error(function(data){
                 deferred.reject(data);
