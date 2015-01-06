@@ -9,19 +9,35 @@ AdsApp.controller('ShowAllAdsCtrl',[
     'adsData',
     'categoryData',
     'townsData',
+    'pageSize',
      function(
          $location,
          $scope,
          adsData,
          categoryData,
-         townsData) {
+         townsData,
+         pageSize) {
 
      $scope.catId='';
      $scope.townsId='';
 
-    adsData.getTestData().then(function(data){
-        $scope.allAds=data;
-    });
+    $scope.requestParams = {startPage: 1, pageSize: pageSize};
+
+//    adsData.getTestData(3).then(function(data){
+//        $scope.allAds=data;
+//
+//    });
+
+      $scope.getListedItems = function () {
+
+          adsData.getTestData($scope.requestParams.startPage).then(function(data){
+              $scope.allAds=data;
+              $scope.pagesArr = new Array(4);
+          });
+
+       };
+
+         $scope.getListedItems ();
 
     categoryData.getCategories().then(function(data){
         $scope.categories=data;

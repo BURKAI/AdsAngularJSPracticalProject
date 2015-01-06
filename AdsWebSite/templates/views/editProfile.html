@@ -1,0 +1,80 @@
+
+<section >
+    <div class="row user-name-head">
+        <div class="col-md-10" user-kit></div><div class="col-md-2 pull-right">Current page info</div>
+    </div>
+    <div class="row gview">
+        <div class="col-md-3 mview">
+            <div class="mview-content">
+                <div class="view-element"><h3>Navigation</h3></div>
+                <hr/>
+                <div class="view-element">
+                    <ul>
+                        <li><button class="navigation" ng-click="goTo('/user/home')"  >Home</button></li>
+                        <li><button class="navigation" ng-click="goTo('/user/myAds')">My Ads</button></li>
+                        <li><button class="navigation" ng-click="goTo('/user/addAd')">Publish new add</button></li>
+                        <li><button class="navigation current-selection" ng-click="goTo('/user/Profile')">Edit profile</button></li>
+                    </ul>
+                </div>
+                <hr/>
+                <div class="view-element"><h5>To publish a new ad, please login.
+                </h5></div>
+            </div>
+        </div>
+        <div class="col-md-9 mview ">
+            <div class="mview-content">
+                <h3 class="article-title">Menage User Profile</h3>
+                <div class="line"></div>
+                <br/>
+                <form class="reg-form" >
+
+                    <div class="row">
+                        <div class="col-md-5 profile">
+                            <p>Change Pssword</p>
+                            <label>UserName</label>
+                            <input type="text" placeholder="put your name here" ng-model="regData.username"></input><br>
+                            <label>Password</label>
+                            <input type="password" placeholder="enter your password" ng-model="regData.password"></input><br>
+                            <label>Confirm password</label>
+                            <input type="password" placeholder="confirm the password here" ng-model="regData.confirmPassword"></input><br>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <button class="decor" ng-click="registerTo()">Cancel</button>
+                                </div>
+                                <div class="col-md-6 pull-right">
+                                    <button class="decor" ng-click="goTo('/login')">Update</button>
+                                </div>
+                            </div><br>
+                        </div>
+                        <div class="col-md-5 profile">
+                            <p>Edit profile</p>
+                            <label>Full Name</label>
+                            <input type="text" placeholder="put your name here" ng-model="regData.name"></input><br>
+                            <label>E-mail</label>
+                            <input type="text" placeholder="put your email here" ng-model="regData.email"></input><br>
+                            <label>Phone</label>&nbsp;&nbsp;
+                            <input type="text" placeholder="enter your phone" ng-model="regData.phone"></input><br>
+                            <label>Town</label>&nbsp;&nbsp;
+                            <select  ng-model="regData.townId" >
+                                <option value="0">choose town<option>
+                                <option ng-repeat="town in towns | orderBy: 'name'" value="{{town.id}}" >{{town.name}}</option>
+                            </select>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <button class="decor" ng-click="registerTo()">Cancel</button>
+                                </div>
+                                <div class="col-md-6 pull-right">
+                                    <button class="decor" ng-click="goTo('/login')">Update</button>
+                                </div>
+                            </div><br>
+                        </div>
+                    </div>
+                    <br>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script></script>
+</section>

@@ -1,0 +1,11 @@
+<ul class="pagination">
+    <li><a href="" data-ng-click="firstPage()">««</a></li>
+    <li><a href="" data-ng-click="prevPage()">«</a></li>
+
+    <li data-ng-repeat="i in pagesArr track by $index" data-id="{{$index + 1}}">
+        <a href="" data-ng-click="setStartPage($index+1)">{{$index + 1}}</a>
+    </li>
+
+    <li><a href="" data-ng-click="nextPage(pagesArr.length)">»</a></li>
+    <li><a href="" data-ng-click="lastPage(pagesArr.length)">»»</a></li>
+</ul>

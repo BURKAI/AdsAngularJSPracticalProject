@@ -14,8 +14,9 @@ AdsApp.factory('auth', ['$http',
                             identity,
                             authorization,
                             baseUrl,
-                             $location) {
-                        var usersApi = baseUrl + '/user'
+                            $location) {
+
+     var usersApi = baseUrl + '/user'
 
     return {
         signup: function(user) {
@@ -58,16 +59,17 @@ AdsApp.factory('auth', ['$http',
                 })
                 .error(function(response){
                     deferred.reject(response);
-                    alert('ERRORESTING');
+
                 })
 
             return deferred.promise;
         },
+
         logout: function() {
             var deferred = $q.defer();
 
             var headers = authorization.getAuthorizationHeader();
-            $http.post(usersApi + '/logout', {}, { headers: headers })
+            $http.post(baseUrl+'/user/Logout', {}, { headers: headers })
                 .success(function() {
                     identity.setCurrentUser(undefined);
                     authorization.removeAuthorizationHeader();

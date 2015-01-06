@@ -20,7 +20,7 @@ AdsApp.factory('authorization', ['identity', function(identity) {
         },
         removeAuthorizationHeader: function() {
             delete headers['Authorization'];
-        },
-        userName:currentUser['username']
+        }
+
     }
 }]);
