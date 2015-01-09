@@ -30,7 +30,7 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
 //                       "categoryId": 0,
 //                       "townId": 0
 //                   };
-                    $location.path('/user/addAd');
+                    $location.path('/user/myAds');
                 })
                 .error(function(data, status, headers, config){
                     defer.reject(data); //"Something went wrong! Try again!"

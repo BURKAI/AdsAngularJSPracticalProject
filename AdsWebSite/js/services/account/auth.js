@@ -28,7 +28,7 @@ AdsApp.factory('auth', ['$http',
                 data:user})
                 .success(function() {
                     deferred.resolve();
-                    swal("Congratulations your registration was successfull!/t Please login!", "It's cool, isn't it?");
+                    swal("Congratulations your registration was successfull!", "Please login!");
                     $location.path('/login');
                 })
                 .error(function(data){

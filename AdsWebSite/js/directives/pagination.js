@@ -25,16 +25,17 @@ AdsApp.directive('pagination', [function () {
                 scope.getListedItems();
             };
 
-            scope.nextPage = function (length) {
-                if (scope.requestParams.startPage < length) {
+            scope.nextPage = function () {
+              //  if (scope.requestParams.startPage < length) {
                     scope.requestParams.startPage += 1;
-                }
+              //  }
 
                 scope.getListedItems();
             };
 
-            scope.lastPage = function (length) {
-                scope.requestParams.startPage = length;
+            scope.lastPage = function () {
+             //   scope.requestParams.startPage = length;
+               // scope.requestParams.startPage=scope.pageSize.length-1;
                 scope.getListedItems();
             };
         }
