@@ -7,11 +7,12 @@ AdsApp.controller('ShowAllMyAdsCtrl',[
     '$location',
     '$scope',
     'newAdsData',
+    '$window',
     function(
         $location,
         $scope,
-        newAdsData
-    ) {
+        newAdsData,
+        $window) {
 
 //        $scope.publishet='';
 //        $scope.waiting='';
@@ -40,7 +41,11 @@ AdsApp.controller('ShowAllMyAdsCtrl',[
             newAdsData.deactivate(id).then(function(success){
                 if(success){
                 $($event.target).hide();
-                $($event.target).parent().find('p').text('Inactive');}
+                 $($event.target).parent().find('p').text('Inactive');
+                 $window.location.reload();
+
+                }
+
             });
         }
 

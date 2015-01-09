@@ -30,41 +30,41 @@
 
                     <div class="row">
                         <div class="col-md-5 profile">
-                            <p>Change Pssword</p>
-                            <label>UserName</label>
-                            <input type="text" placeholder="put your name here" ng-model="regData.username"></input><br>
+                            <p>Change Password</p>
+                            <label>Old Password</label>
+                            <input type="password" placeholder="put old password here" ng-model="userData.oldPassword"></input><br>
                             <label>Password</label>
-                            <input type="password" placeholder="enter your password" ng-model="regData.password"></input><br>
+                            <input type="password" placeholder="enter your new password" ng-model="userData.newPassword"></input><br>
                             <label>Confirm password</label>
-                            <input type="password" placeholder="confirm the password here" ng-model="regData.confirmPassword"></input><br>
+                            <input type="password" placeholder="confirm the password here" ng-model="userData.confirmPassword"></input><br>
                             <div class="row">
                                 <div class="col-md-6 ">
-                                    <button class="decor" ng-click="registerTo()">Cancel</button>
+                                    <button class="decor" ng-click="goTo('/user/home')">Cancel</button>
                                 </div>
                                 <div class="col-md-6 pull-right">
-                                    <button class="decor" ng-click="goTo('/login')">Update</button>
+                                    <button class="decor" ng-click="updatePassword()">Update</button>
                                 </div>
                             </div><br>
                         </div>
                         <div class="col-md-5 profile">
                             <p>Edit profile</p>
                             <label>Full Name</label>
-                            <input type="text" placeholder="put your name here" ng-model="regData.name"></input><br>
+                            <input type="text" placeholder="put your name here" ng-model="profileData.name"></input><br>
                             <label>E-mail</label>
-                            <input type="text" placeholder="put your email here" ng-model="regData.email"></input><br>
+                            <input type="text" placeholder="put your email here" ng-model="profileData.email"></input><br>
                             <label>Phone</label>&nbsp;&nbsp;
-                            <input type="text" placeholder="enter your phone" ng-model="regData.phone"></input><br>
+                            <input type="text" placeholder="enter your phone" ng-model="profileData.phoneNumber"></input><br>
                             <label>Town</label>&nbsp;&nbsp;
-                            <select  ng-model="regData.townId" >
+                            <select  ng-model="profileData.townId" >
                                 <option value="0">choose town<option>
                                 <option ng-repeat="town in towns | orderBy: 'name'" value="{{town.id}}" >{{town.name}}</option>
                             </select>
                             <div class="row">
                                 <div class="col-md-6 ">
-                                    <button class="decor" ng-click="registerTo()">Cancel</button>
+                                    <button class="decor" ng-click="goTo('/user/home')">Cancel</button>
                                 </div>
                                 <div class="col-md-6 pull-right">
-                                    <button class="decor" ng-click="goTo('/login')">Update</button>
+                                    <button class="decor" ng-click="updateProfile()">Update</button>
                                 </div>
                             </div><br>
                         </div>

@@ -5,11 +5,12 @@
 var AdsApp = angular
     .module('AdsApp', ['ngRoute','ngCookies'])
     .config(function($routeProvider){
-            $routeProvider.when('/route',{
-                templateUrl:'templates/views/home.html',
-                controller:'ShowAllAdsCtrl'
-            })
-            .when('/register',{
+            $routeProvider
+                .when('/route',{
+                    templateUrl:'templates/views/home.html',
+                    controller:'ShowAllAdsCtrl'
+                })
+                 .when('/register',{
                     templateUrl:'templates/views/register.html',
                     controller:'RegisterCtrl'
                 })
@@ -30,8 +31,12 @@ var AdsApp = angular
                     controller:'ShowAllMyAdsCtrl'
                 })
                 .when('/user/Profile',{
-                    templateUrl:'templates/views/editProfile.html'
-                   // controller:'ShowAllMyAdsCtrl'
+                    templateUrl:'templates/views/editProfile.html',
+                    controller:'ProfileCtrl'
+                })
+                .when('/user/editAd',{
+                    templateUrl:'templates/views/editAd.html',
+                    controller:'EditAdCtrl'
                 })
             .otherwise({redirectTo:'/route'});
         })

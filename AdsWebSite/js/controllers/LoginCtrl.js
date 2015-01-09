@@ -28,11 +28,11 @@ AdsApp.controller('LoginCtrl',[
                // loginData.postLogination(logData);
                 auth.login(logData).then(function(success) {
                     if (success) {
-                     alert('success');
+
                         $location.path('/user/home');
                     }
                     else {
-                       alert('error');
+
                     }
                 });
             }

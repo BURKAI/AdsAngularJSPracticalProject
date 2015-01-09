@@ -1,0 +1,90 @@
+
+<section >
+    <div class="row user-name-head">
+        <div class="col-md-10" user-kit></div><div class="col-md-2 pull-right">Current page info</div>
+    </div>
+    <div class="row gview">
+        <div class="col-md-3 mview">
+            <div class="mview-content">
+                <div class="view-element"><h3>Navigation</h3></div>
+                <hr/>
+                <div class="view-element">
+                    <ul>
+                        <li><button class="navigation" ng-click="goTo('/user/home')"  >Home</button></li>
+                        <li><button class="navigation" ng-click="goTo('/user/myAds')">My Ads</button></li>
+                        <li><button class="navigation goTo('/user/addAd')">Publish new add</button></li>
+                        <li><button class="navigation" ng-click="goTo('/user/Profile')">Edit profile</button></li>
+                        <li><button class="navigation current-selection" ng-click="" ng-click="goTo('/user/editAd')">Edit ad</button></li>
+                    </ul>
+                </div>
+                <hr/>
+                <div class="view-element"><h5>To publish a new ad, please click new ad button.
+                </h5></div>
+            </div>
+        </div>
+        <div class="col-md-6 mview ">
+            <div class="mview-content">
+                <h3 class="article-title">Edit existing ad</h3>
+                <div class="line"></div>
+                <form>
+                    <div clas="row bordered">
+                        <div class="col-md-8 bordered">
+                            <div class="row bordered">
+                                <div class="col-md-4 bordered">
+                                    <label>Title</label>
+                                </div>
+                                <div class="col-md-7 bordered">
+                                    <input required="required" type="text" ng-model="newAdData.title" placeholder="Put title here"/>
+                                </div>
+                            </div>
+                            <div class="row bordered">
+                                <div class="col-md-4 bordered">
+                                    <label>Text</label>
+                                </div>
+                                <div class="col-md-7 bordered">
+                                    <textarea required="required" type="text" ng-model="newAdData.text" placeholder="Put text info here"/>
+                                </div>
+                            </div>
+                            <div class="row bordered">
+                                <div class="col-md-4 bordered">
+                                    <label>Image</label>
+                                </div>
+                                <div class="col-md-7 bordered">
+                                    <input type="text" ng-model="newAdData.imageDataURL" placeholder="Image not set yet..." disabled="disabled" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 bordered">
+                            <img  ng-src="{{newAdData.imageDataURL}}" ><img>
+                            <div class="fileUpload btn btn-primary">
+                                <span>Upload</span>
+                                <input type="file" upload-img class="decor upload" accept ="image/*" placeholder="Browse for image..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bordered">
+                        <div class="col-md-6 bordered">
+                            <label>Category</label>
+                            <select  ng-model="newAdData.categoryId" >
+                                <option value="0">choose category</option>
+                                <option ng-repeat="cat in categories | orderBy: 'name'" value="{{cat.id}}" >{{cat.name}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5 bordered">
+                            <label>Town</label>
+                            <select  ng-model="newAdData.townId" >
+                                <option value="0">choose town</option>
+                                <option ng-repeat="town in towns | orderBy: 'name'" value="{{town.id}}" >{{town.name}}</option>
+                            </select>
+
+                        </div>
+                        <br/>
+                    </div>
+                    <button class="decor">Cancel</button>
+                    <button class="decor" ng-click="addAd()">Update</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

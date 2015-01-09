@@ -18,6 +18,8 @@ AdsApp.controller('ShowAllAdsCtrl',[
          townsData,
          pageSize) {
 
+
+
      $scope.catId='';
      $scope.townsId='';
 

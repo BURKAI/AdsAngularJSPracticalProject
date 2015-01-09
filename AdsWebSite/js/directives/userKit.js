@@ -2,7 +2,9 @@
  * Created by Poullo on 1/6/2015.
  */
 
-AdsApp.directive('userKit', ['identity','auth','$location',function (identity,auth,$location) {
+AdsApp.directive('userKit', ['identity','auth','$location','$window',function (identity,auth,$location,$window) {
+
+
     return {
         restrict: 'A',
         templateUrl: './templates/directives/userKit.html',
@@ -15,16 +17,26 @@ AdsApp.directive('userKit', ['identity','auth','$location',function (identity,au
 
          if(!identity.isAuthenticated()){
                  elem.hide();
+
           }
           else{
+             //
               elem.show();
+              if($location.path()=='/route'){elem.hide();}
               scope.user=identity.getCurrentUser().username;
-              elem.find('button').on('click', function() {
-                    auth.logout();
-                    elem.hide();
-                    $location.path('/rout');
-            });
+
+
           }
+
+            elem.find('button').on('click', function() {
+                auth.logout();
+                elem.remove();
+                $location.path('/route');
+
+
+            });
+
+
 
         }
     };

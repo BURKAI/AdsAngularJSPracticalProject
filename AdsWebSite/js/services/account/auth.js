@@ -54,11 +54,13 @@ AdsApp.factory('auth', ['$http',
                         identity.setCurrentUser(response);
                         authorization.setAuthorizationHeader(response['access_token']);
                         deferred.resolve(true);
+                        swal("Welcome, "+response.username+"!", "It's cool, isn't it?");
                     }
 
                 })
                 .error(function(response){
                     deferred.reject(response);
+                    sweetAlert("Wrong username or password","Please try again!","error");
 
                 })
 

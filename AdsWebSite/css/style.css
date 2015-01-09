@@ -21,7 +21,7 @@ img[ng-src='']{
 
 .top-border{
     height:10px;
-    background-color: #74717b;
+    background-color: #142430;
 }
 
 .mgi{
@@ -42,6 +42,7 @@ li{
 }
 .head{
     background-color: rgba(140,140,140,1);
+    background-image: url('../img/logoHeader.png');
     font-family: CorporativeFont;
     border-corner-shape:bevel;
     /border-bottom-left-radius: 20px;
@@ -52,7 +53,8 @@ h3 {
 }
 
 .head h1{
-    color:#a1d9f2;
+    color: #f2e2e8;
+    text-shadow: 1px 1px 1px #546686;
 }
 
 .head img{
@@ -247,4 +249,13 @@ form button{
     margin:5px;
     border:1px solid #9c94b1;
     border-radius: 5px;
+   / background-color: #f0edf9;
+}
+
+.menaged-buttons button{
+    margin:2px;
+    width:65% ;
+    color:green;
+    border-radius: 5px;
+    border: 1px solid #a6a6a6;
 }
