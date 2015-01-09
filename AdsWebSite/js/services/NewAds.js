@@ -71,8 +71,7 @@ AdsApp.factory('newAdsData',['$http','$q','$location','authorization','baseUrl',
             })
                 .success(function(data, status, headers, config){
                     defer.resolve(data);
-                    alert('Deactivation complete');
-                  //  $('button').hide();
+                    swal('Deactivation complete!', "Is that good?");
                     $location.path('/user/myAds');
                 })
                 .error(function(data, status, headers, config){

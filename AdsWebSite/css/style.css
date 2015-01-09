@@ -259,3 +259,10 @@ form button{
     border-radius: 5px;
     border: 1px solid #a6a6a6;
 }
+
+.glyphicon {
+  // border: 1px solid #d4d8ec;
+    padding: 2px;
+  //  box-shadow: 1px 1px 1px #acacac;
+   font-size: 0.7em;
+}

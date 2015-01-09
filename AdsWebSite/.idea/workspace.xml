@@ -83,31 +83,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowAllMyAdsCtrl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/ShowAllMyAdsCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="969">
-              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userKit.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="userKit.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/directives/userKit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39605734" vertical-offset="102" max-vertical-offset="816">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="816">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeUser.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/views/homeUser.html">
+      <file leaf-file-name="NewAds.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/services/NewAds.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="1496">
-              <caret line="3" column="8" selection-start-line="2" selection-start-column="3" selection-end-line="4" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1019" max-vertical-offset="4369">
+              <caret line="72" column="40" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -116,8 +106,18 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1530">
-              <caret line="4" column="10" selection-start-line="2" selection-start-column="4" selection-end-line="4" selection-end-column="10" />
+            <state vertical-scroll-proportion="-15.038462" vertical-offset="510" max-vertical-offset="1530">
+              <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.79518074" vertical-offset="4043" max-vertical-offset="4641">
+              <caret line="265" column="4" selection-start-line="265" selection-start-column="4" selection-end-line="265" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -164,18 +164,18 @@
         <option value="$PROJECT_DIR$/js/services/account/auth.js" />
         <option value="$PROJECT_DIR$/templates/views/homeUser.html" />
         <option value="$PROJECT_DIR$/templates/directives/menageAd.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/services/adEditService.js" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/controllers/ShowAllMyAdsCtrl.js" />
         <option value="$PROJECT_DIR$/js/directives/menageAd.js" />
         <option value="$PROJECT_DIR$/templates/views/editAd.html" />
-        <option value="$PROJECT_DIR$/js/services/NewAds.js" />
         <option value="$PROJECT_DIR$/js/controllers/EditAdCtrl.js" />
         <option value="$PROJECT_DIR$/js/controllers/ShowAllAdsCtrl.js" />
-        <option value="$PROJECT_DIR$/templates/views/home.html" />
         <option value="$PROJECT_DIR$/js/directives/userKit.js" />
+        <option value="$PROJECT_DIR$/js/services/NewAds.js" />
+        <option value="$PROJECT_DIR$/templates/views/home.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -448,7 +448,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -502,6 +502,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -533,6 +534,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -706,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3860" max-vertical-offset="4522">
-          <caret line="251" column="4" selection-start-line="251" selection-start-column="4" selection-end-line="251" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/RegisterCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="1003">
@@ -779,14 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
           <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/NewAds.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3722" max-vertical-offset="4386">
-          <caret line="237" column="47" selection-start-line="237" selection-start-column="47" selection-end-line="237" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -865,18 +852,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/views/home.html">
+    <entry file="file://$PROJECT_DIR$/js/directives/userKit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1530">
-          <caret line="4" column="10" selection-start-line="2" selection-start-column="4" selection-end-line="4" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="816">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/directives/userKit.js">
+    <entry file="file://$PROJECT_DIR$/js/services/NewAds.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39605734" vertical-offset="102" max-vertical-offset="816">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1019" max-vertical-offset="4369">
+          <caret line="72" column="40" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.038462" vertical-offset="510" max-vertical-offset="1530">
+          <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79518074" vertical-offset="4043" max-vertical-offset="4641">
+          <caret line="265" column="4" selection-start-line="265" selection-start-column="4" selection-end-line="265" selection-end-column="4" />
           <folding />
         </state>
       </provider>
