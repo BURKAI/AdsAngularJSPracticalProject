@@ -34,6 +34,7 @@ AdsApp.controller('ShowAllAdsCtrl',[
 
           adsData.getTestData($scope.requestParams.startPage).then(function(data){
               $scope.allAds=data;
+              $scope.numberOfPages=data.numPages;
               $scope.pagesArr = new Array(4);
           });
 
